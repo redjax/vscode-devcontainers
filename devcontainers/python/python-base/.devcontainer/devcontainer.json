@@ -22,6 +22,14 @@
             }
         }
     },
+    // Command to run after building & starting the container
+    // "postCreateCommand": "",
+    // User to run as in the container
+    "remoteUser": "vscode",
+    // Optional: useful for certain signal handling
+    "runArgs": [
+        "--init"
+    ],
     // Add VSCode extensions to the environment
     "extensions": [
         "ms-python.python",
@@ -61,13 +69,5 @@
         "mtxr.sqltools-driver-pg",
         "matsbolter.vscode-cookierunner",
         "redhat.vscode-yaml"
-    ],
-    // Command to run after building & starting the container
-    // "postCreateCommand": "",
-    // User to run as in the container
-    "remoteUser": "vscode",
-    // Optional: useful for certain signal handling
-    "runArgs": [
-        "--init"
     ]
 }
