@@ -1,0 +1,7 @@
+{
+    "project_name": "unnamed-python",
+    "img_variant": "3.11",
+    "container_user": "vscode",
+    "devcontainer_name": "py-devcontainer",
+    "include_requirements_txt": false
+}

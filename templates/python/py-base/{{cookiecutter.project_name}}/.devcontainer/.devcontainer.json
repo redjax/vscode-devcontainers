@@ -1,0 +1,73 @@
+{
+    // Name of your dev container
+    "name": "{{ cookiecutter.devcontainer_name }}",
+    "dockerComposeFile": "./docker-compose.yml",
+    // Name of the service defined in docker-compose.yml
+    "service": "devcontainer",
+    // Path to your workspace inside the container
+    "workspaceFolder": "/workspace",
+    // Action to take when closing the container
+    "shutdownAction": "stopCompose",
+    "settings": {
+        // Adjust this based on your Python installation path in the container
+        "python.pythonPath": "/usr/local/bin/python",
+        // Set the shell for the container
+        "terminal.integrated.defaultProfile.linux": "bash",
+        // Customize the default bash prompt
+        "terminal.integrated.profiles.linux": {
+            "bash": {
+                "path": "bash",
+                "args": [],
+                "icon": "terminal-bash"
+            }
+        }
+    },
+    // Add VSCode extensions to the environment
+    "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "ms-azuretools.vscode-docker",
+        "formulahendry.auto-complete-tag",
+        "rogalmic.bash-debug",
+        "mads-hartmann.bash-ide-vscode",
+        "jomeinaster.bracket-peek",
+        "tamasfe.even-better-toml",
+        "wattenberger.footsteps",
+        "mhutchie.git-graph",
+        "bradgashler.htmltagwrap",
+        "visualstudioexptteam.vscodeintellicode",
+        "visualstudioexptteam.vscodeintellicode-completions",
+        "wholroyd.jinja",
+        "samuelcolvin.jinjahtml",
+        "bibhasdn.django-html",
+        "ms-toolsai.jupyter",
+        "yzhang.markdown-all-in-one",
+        "william-voyek.vscode-nginx",
+        "ahmadalli.vscode-nginx-conf",
+        "adamviola.parquet-explorer",
+        "christian-kohler.path-intellisense",
+        "esbenp.prettier-vscode",
+        "mohsen1.prettify-json",
+        "teticio.python-envy",
+        "donjayamanne.python-extension-pack",
+        "njqdev.vscode-python-typehint",
+        "mutantdino.resourcemonitor",
+        "foxundermoon.shell-format",
+        "qwtel.sqlite-viewer",
+        "mtxr.sqltools-driver-sqlite",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-mysql",
+        "mtxr.sqltools-driver-pg",
+        "matsbolter.vscode-cookierunner",
+        "redhat.vscode-yaml"
+    ],
+    // Command to run after building & starting the container
+    // "postCreateCommand": "",
+    // User to run as in the container
+    "remoteUser": "{{ cookiecutter.container_user }}",
+    // Optional: useful for certain signal handling
+    "runArgs": [
+        "--init"
+    ]
+}
